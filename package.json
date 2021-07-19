@@ -1,16 +1,16 @@
 {
-  "name": "wokcommands",
-  "version": "1.3.6",
+  "name": "siycommands",
+  "version": "1.0.0",
   "main": "dist/index.js",
   "scripts": {
     "compile": "tsc && node index.js",
     "dev": "nodemon -e ts --exec \"npm run compile\""
   },
   "keywords": [],
-  "author": "Alexzander Flores, WornOffKeys.com",
+  "author": "Siyris Om, Siyris.com",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^12.5.3",
+    "discord.js": "^13.0.0-dev.4206e35.1626350625",
     "dotenv": "^8.2.0",
     "mongoose": "^5.10.15"
   },
@@ -20,9 +20,9 @@
     "ts-node-dev": "^1.0.0",
     "typescript": "^4.1.2"
   },
-  "description": "An easy to use command handler for Discord.JS",
+  "description": "Command handler used for Discord.JS used by SIY",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AlexzanderFlores/WOKCommands"
+    "url": "https://github.com/Siyris-Inc/SIYCommands"
   }
 }
