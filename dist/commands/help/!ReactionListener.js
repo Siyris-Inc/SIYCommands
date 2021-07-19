@@ -209,7 +209,7 @@ var ReactionHandler = /** @class */ (function () {
                 reactions.push("⬅");
                 reactions.push("➡");
             }
-            reactions.push("🚪");
+            reactions.push("💡");
             addReactions(_this.message, reactions);
         };
         /**
@@ -253,9 +253,9 @@ var ReactionHandler = /** @class */ (function () {
         var mainName = typeof names === "string" ? names : names.shift();
         var desc = "**" + mainName + "**" + (description ? " - " : "") + description;
         if (names.length && typeof names !== "string") {
-            desc += "\n" + instance.messageHandler.getEmbed(guild, "HELP_MENU", "ALIASES") + ": \"" + names.join('", "') + "\"";
+            desc += "\n" + instance.messageHandler.getEmbed(guild, "HELP_MENU", "ALIASES") + ": `" + names.join('", "') + "`";
         }
-        desc += "\n" + instance.messageHandler.getEmbed(guild, "HELP_MENU", "SYNTAX") + ": \"" + instance.getPrefix(guild) + mainName + (syntax ? " " : "") + (syntax || "") + "\"";
+        desc += "\n" + instance.messageHandler.getEmbed(guild, "HELP_MENU", "SYNTAX") + ": ```" + instance.getPrefix(guild) + mainName + (syntax ? " " : "") + (syntax || "") + "```";
         return desc;
     };
     return ReactionHandler;

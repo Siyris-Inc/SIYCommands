@@ -18,7 +18,7 @@ module.exports = {
   aliases: 'commands',
   maxArgs: 1,
   expectedArgs: '[command]',
-  description: "Displays this bot's commands",
+  description: "Displays the commands SIY understands.",
   category: 'Help',
   init: (client: Client, instance: SIYCommands) => {
     client.on('messageReactionAdd', async (reaction, user) => {

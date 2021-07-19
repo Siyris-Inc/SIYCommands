@@ -239,11 +239,11 @@
             "german": "Befehle"
         },
         "DESCRIPTION_FIRST_LINE": {
-            "english": "Use 🚪 to return to the previous menu.",
-            "spanish": "Utilice 🚪 para volver al menú anterior.",
-            "portuguese": "Use 🚪 para retornar ao menu anterior",
-            "russian": "Используйте 🚪, что-бы вернуться в предыдущее меню.",
-            "german": "Benutze 🚪, um zum vorherigen Menü zurückzukehren."
+            "english": "Use 💡 to return to the previous menu.",
+            "spanish": "Utilice 💡 para volver al menú anterior.",
+            "portuguese": "Use 💡 para retornar ao menu anterior",
+            "russian": "Используйте 💡, что-бы вернуться в предыдущее меню.",
+            "german": "Benutze 💡, um zum vorherigen Menü zurückzukehren."
         },
         "DESCRIPTION_SECOND_LINE": {
             "english": "Use ⬅ and ➡ to navigate between pages.",

@@ -198,16 +198,16 @@ class ReactionHandler {
         guild,
         "HELP_MENU",
         "ALIASES"
-      )}: "${names.join('", "')}"`;
+      )}: \`${names.join('", "')}\``;
     }
 
     desc += `\n${instance.messageHandler.getEmbed(
       guild,
       "HELP_MENU",
       "SYNTAX"
-    )}: "${instance.getPrefix(guild)}${mainName}${syntax ? " " : ""}${
+    )}: \`\`\`${instance.getPrefix(guild)}${mainName}${syntax ? " " : ""}${
       syntax || ""
-    }"`;
+    }\`\`\``;
 
     return desc;
   };
@@ -274,7 +274,7 @@ class ReactionHandler {
       reactions.push("⬅");
       reactions.push("➡");
     }
-    reactions.push("🚪");
+    reactions.push("💡");
     addReactions(this.message, reactions);
   };
 
