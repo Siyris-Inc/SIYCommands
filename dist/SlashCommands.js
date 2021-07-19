@@ -199,7 +199,7 @@ var SlashCommands = /** @class */ (function () {
                     case 1:
                         result = _a.sent();
                         if (!result) {
-                            console.error("WOKCommands > Command \"" + commandName + "\" did not return any content from it's callback function. This is required as it is a slash command.");
+                            console.error("SIYCommands > Command \"" + commandName + "\" did not return any content from it's callback function. This is required as it is a slash command.");
                             return [2 /*return*/, false];
                         }
                         data = {

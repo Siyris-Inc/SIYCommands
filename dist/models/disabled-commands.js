@@ -11,4 +11,4 @@ var disabledCommands = new mongoose_1.default.Schema({
     guildId: reqString,
     command: reqString,
 });
-module.exports = mongoose_1.default.model('wokcommands-disabled-commands', disabledCommands);
+module.exports = mongoose_1.default.model('SIYCommands-disabled-commands', disabledCommands);

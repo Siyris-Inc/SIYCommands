@@ -1,5 +1,5 @@
 import { Client, Message, PermissionString, TextChannel } from "discord.js";
-import WOKCommands from "..";
+import SIYCommands from "..";
 
 export default interface ICommand {
   names: string[] | string;
@@ -19,7 +19,7 @@ export default interface ICommand {
     text: string;
     client: Client;
     prefix: string;
-    instance: WOKCommands;
+    instance: SIYCommands;
   };
   cooldown?: string;
   globalCooldown?: string;

@@ -36,7 +36,7 @@ var getFirstEmbed = function (message, instance) {
         var key = keys[a];
         var emoji = categories[key].emoji;
         if (!emoji) {
-            console.warn("WOKCommands > Category \"" + key + "\" does not have an emoji icon.");
+            console.warn("SIYCommands > Category \"" + key + "\" does not have an emoji icon.");
             continue;
         }
         var visibleCommands = instance.commandHandler.getCommandsByCategory(key, true);

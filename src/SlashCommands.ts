@@ -7,14 +7,14 @@ import {
   GuildMember,
   MessageEmbed,
 } from "discord.js";
-import WOKCommands from ".";
+import SIYCommands from ".";
 import ISlashCommand from "./interfaces/ISlashCommand";
 
 class SlashCommands {
   private _client: Client;
-  private _instance: WOKCommands;
+  private _instance: SIYCommands;
 
-  constructor(instance: WOKCommands, listen = true) {
+  constructor(instance: SIYCommands, listen = true) {
     this._instance = instance;
     this._client = instance.client;
 
@@ -165,7 +165,7 @@ class SlashCommands {
 
     if (!result) {
       console.error(
-        `WOKCommands > Command "${commandName}" did not return any content from it's callback function. This is required as it is a slash command.`
+        `SIYCommands > Command "${commandName}" did not return any content from it's callback function. This is required as it is a slash command.`
       );
       return false;
     }

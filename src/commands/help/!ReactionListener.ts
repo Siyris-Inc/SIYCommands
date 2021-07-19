@@ -6,7 +6,7 @@ import {
   PartialUser,
   User,
 } from "discord.js";
-import WOKCommands from "../..";
+import SIYCommands from "../..";
 import ICommand from "../../interfaces/ICommand";
 import getFirstEmbed from "./!get-first-embed";
 
@@ -25,7 +25,7 @@ const /**
   };
 
 class ReactionHandler {
-  instance: WOKCommands;
+  instance: SIYCommands;
   reaction: MessageReaction;
   user: PartialUser | User;
   message: Message;
@@ -37,7 +37,7 @@ class ReactionHandler {
   pageLimit = 3;
 
   constructor(
-    instance: WOKCommands,
+    instance: SIYCommands,
     reaction: MessageReaction,
     user: PartialUser | User
   ) {
@@ -185,7 +185,7 @@ class ReactionHandler {
 
   static getHelp = (
     command: ICommand,
-    instance: WOKCommands,
+    instance: SIYCommands,
     guild: Guild | null
   ) => {
     const { description, syntax, names } = command;

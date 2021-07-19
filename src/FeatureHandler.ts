@@ -1,6 +1,6 @@
 import { Client } from 'discord.js'
 import fs from 'fs'
-import WOKCommands from '.'
+import SIYCommands from '.'
 import path from 'path'
 
 import Events from './enums/Events'
@@ -9,16 +9,16 @@ import getAllFiles from './get-all-files'
 const waitingForDB: {
   func: Function
   client: Client
-  instance: WOKCommands
+  instance: SIYCommands
   isEnabled: Function
 }[] = []
 
 class FeatureHandler {
   private _features: Map<String, String[]> = new Map() // <Feature name, Disabled GuildIDs>
   private _client: Client
-  private _instance: WOKCommands
+  private _instance: SIYCommands
 
-  constructor(client: Client, instance: WOKCommands, dir: string) {
+  constructor(client: Client, instance: SIYCommands, dir: string) {
     this._client = client
     this._instance = instance
     ;(async () => {
@@ -46,7 +46,7 @@ class FeatureHandler {
     }
 
     console.log(
-      `WOKCommands > Loaded ${amount} listener${amount === 1 ? '' : 's'}.`
+      `SIYCommands > Loaded ${amount} listener${amount === 1 ? '' : 's'}.`
     )
     ;(async () => {
       for (const [file, fileName] of files) {
@@ -79,12 +79,12 @@ class FeatureHandler {
 
       if (missing.length && this._instance.showWarns) {
         console.warn(
-          `WOKCommands > Feature "${fileName}" has a config file that doesn't contain the following properties: ${missing}`
+          `SIYCommands > Feature "${fileName}" has a config file that doesn't contain the following properties: ${missing}`
         )
       }
     } else if (this._instance.showWarns) {
       console.warn(
-        `WOKCommands > Feature "${fileName}" does not export a config object.`
+        `SIYCommands > Feature "${fileName}" does not export a config object.`
       )
     }
 

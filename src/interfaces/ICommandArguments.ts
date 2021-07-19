@@ -1,5 +1,5 @@
 import { Client, Message, TextChannel } from "discord.js";
-import WOKCommands from "..";
+import SIYCommands from "..";
 
 export default interface ICommandArguments {
   channel: TextChannel;
@@ -8,5 +8,5 @@ export default interface ICommandArguments {
   text: string;
   client: Client;
   prefix: string;
-  instance: WOKCommands;
+  instance: SIYCommands;
 }

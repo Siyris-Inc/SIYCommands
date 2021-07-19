@@ -1,5 +1,5 @@
 import mongoose, { Connection } from "mongoose";
-import WOKCommands from ".";
+import SIYCommands from ".";
 
 import Events from "./enums/Events";
 
@@ -14,7 +14,7 @@ const results: {
 
 const mongo = async (
   mongoPath: string,
-  instance: WOKCommands,
+  instance: SIYCommands,
   dbOptions = {}
 ) => {
   await mongoose.connect(mongoPath, {

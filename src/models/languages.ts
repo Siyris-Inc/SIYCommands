@@ -11,4 +11,4 @@ const languageSchema = new mongoose.Schema({
   language: reqString,
 })
 
-export = mongoose.model('wokcommands-languages', languageSchema)
+export = mongoose.model('SIYCommands-languages', languageSchema)

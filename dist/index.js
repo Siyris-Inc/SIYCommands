@@ -78,9 +78,9 @@ var prefixes_1 = __importDefault(require("./models/prefixes"));
 var message_handler_1 = __importDefault(require("./message-handler"));
 var Events_1 = __importDefault(require("./enums/Events"));
 var SlashCommands_1 = __importDefault(require("./SlashCommands"));
-var WOKCommands = /** @class */ (function (_super) {
-    __extends(WOKCommands, _super);
-    function WOKCommands(client, options) {
+var SIYCommands = /** @class */ (function (_super) {
+    __extends(SIYCommands, _super);
+    function SIYCommands(client, options) {
         var _this = _super.call(this) || this;
         _this._defaultPrefix = "!";
         _this._commandsDir = "commands";
@@ -112,11 +112,11 @@ var WOKCommands = /** @class */ (function (_super) {
             !partials.includes("MESSAGE") ||
             !partials.includes("REACTION")) {
             if (showWarns) {
-                console.warn("WOKCommands > It is encouraged to use both \"MESSAGE\" and \"REACTION\" partials when using WOKCommands due to it's help menu. More information can be found here: https://discord.js.org/#/docs/main/stable/topics/partials");
+                console.warn("SIYCommands > It is encouraged to use both \"MESSAGE\" and \"REACTION\" partials when using SIYCommands due to it's help menu. More information can be found here: https://discord.js.org/#/docs/main/stable/topics/partials");
             }
         }
         if (showWarns && !commandsDir) {
-            console.warn('WOKCommands > No commands folder specified. Using "commands"');
+            console.warn('SIYCommands > No commands folder specified. Using "commands"');
         }
         // Get the directory path of the project using this package
         // This way users don't need to use path.join(__dirname, 'dir')
@@ -172,7 +172,7 @@ var WOKCommands = /** @class */ (function (_super) {
                         return [3 /*break*/, 4];
                     case 3:
                         if (showWarns) {
-                            console.warn("WOKCommands > No MongoDB connection URI provided. Some features might not work! See this for more details:\nhttps://github.com/AlexzanderFlores/WOKCommands#setup");
+                            console.warn("SIYCommands > No MongoDB connection URI provided. Some features might not work! See this for more details:\nhttps://github.com/AlexzanderFlores/SIYCommands#setup");
                         }
                         this.emit(Events_1.default.DATABASE_CONNECTED, null, "");
                         _a.label = 4;
@@ -182,95 +182,95 @@ var WOKCommands = /** @class */ (function (_super) {
         }); }, 500);
         return _this;
     }
-    Object.defineProperty(WOKCommands.prototype, "mongoPath", {
+    Object.defineProperty(SIYCommands.prototype, "mongoPath", {
         get: function () {
             return this._mongo;
         },
         enumerable: false,
         configurable: true
     });
-    WOKCommands.prototype.setMongoPath = function (mongoPath) {
+    SIYCommands.prototype.setMongoPath = function (mongoPath) {
         this._mongo = mongoPath;
         return this;
     };
     /**
      * @deprecated Please use the messages.json file instead of this method.
      */
-    WOKCommands.prototype.setSyntaxError = function (syntaxError) {
-        console.warn("WOKCommands > The setSyntaxError method is deprecated. Please use messages.json instead. See https://www.npmjs.com/package/wokcommands#language-support for more information");
+    SIYCommands.prototype.setSyntaxError = function (syntaxError) {
+        console.warn("SIYCommands > The setSyntaxError method is deprecated. Please use messages.json instead. See https://www.npmjs.com/package/SIYCommands#language-support for more information");
         return this;
     };
-    Object.defineProperty(WOKCommands.prototype, "client", {
+    Object.defineProperty(SIYCommands.prototype, "client", {
         get: function () {
             return this._client;
         },
         enumerable: false,
         configurable: true
     });
-    Object.defineProperty(WOKCommands.prototype, "displayName", {
+    Object.defineProperty(SIYCommands.prototype, "displayName", {
         get: function () {
             return this._displayName;
         },
         enumerable: false,
         configurable: true
     });
-    WOKCommands.prototype.setDisplayName = function (displayName) {
+    SIYCommands.prototype.setDisplayName = function (displayName) {
         this._displayName = displayName;
         return this;
     };
-    Object.defineProperty(WOKCommands.prototype, "prefixes", {
+    Object.defineProperty(SIYCommands.prototype, "prefixes", {
         get: function () {
             return this._prefixes;
         },
         enumerable: false,
         configurable: true
     });
-    Object.defineProperty(WOKCommands.prototype, "defaultPrefix", {
+    Object.defineProperty(SIYCommands.prototype, "defaultPrefix", {
         get: function () {
             return this._defaultPrefix;
         },
         enumerable: false,
         configurable: true
     });
-    WOKCommands.prototype.setDefaultPrefix = function (defaultPrefix) {
+    SIYCommands.prototype.setDefaultPrefix = function (defaultPrefix) {
         this._defaultPrefix = defaultPrefix;
         return this;
     };
-    WOKCommands.prototype.getPrefix = function (guild) {
+    SIYCommands.prototype.getPrefix = function (guild) {
         return this._prefixes[guild ? guild.id : ""] || this._defaultPrefix;
     };
-    WOKCommands.prototype.setPrefix = function (guild, prefix) {
+    SIYCommands.prototype.setPrefix = function (guild, prefix) {
         if (guild) {
             this._prefixes[guild.id] = prefix;
         }
         return this;
     };
-    Object.defineProperty(WOKCommands.prototype, "categories", {
+    Object.defineProperty(SIYCommands.prototype, "categories", {
         get: function () {
             return this._categories;
         },
         enumerable: false,
         configurable: true
     });
-    Object.defineProperty(WOKCommands.prototype, "hiddenCategories", {
+    Object.defineProperty(SIYCommands.prototype, "hiddenCategories", {
         get: function () {
             return this._hiddenCategories;
         },
         enumerable: false,
         configurable: true
     });
-    Object.defineProperty(WOKCommands.prototype, "color", {
+    Object.defineProperty(SIYCommands.prototype, "color", {
         get: function () {
             return this._color;
         },
         enumerable: false,
         configurable: true
     });
-    WOKCommands.prototype.setColor = function (color) {
+    SIYCommands.prototype.setColor = function (color) {
         this._color = color;
         return this;
     };
-    WOKCommands.prototype.getEmoji = function (category) {
+    SIYCommands.prototype.getEmoji = function (category) {
         var emoji = this._categories.get(category) || "";
         if (typeof emoji === "object") {
             // @ts-ignore
@@ -278,7 +278,7 @@ var WOKCommands = /** @class */ (function (_super) {
         }
         return emoji;
     };
-    WOKCommands.prototype.getCategory = function (emoji) {
+    SIYCommands.prototype.getCategory = function (emoji) {
         var result = "";
         this._categories.forEach(function (value, key) {
             // == is intended here
@@ -293,18 +293,18 @@ var WOKCommands = /** @class */ (function (_super) {
     /**
      * @deprecated Please use the setCategorySettings instead of this method.
      */
-    WOKCommands.prototype.setCategoryEmoji = function (category, emoji) {
-        console.warn("WOKCommands > The setCategoryEmoji method is deprecated, please use setCategorySettings");
+    SIYCommands.prototype.setCategoryEmoji = function (category, emoji) {
+        console.warn("SIYCommands > The setCategoryEmoji method is deprecated, please use setCategorySettings");
         this.setCategorySettings(category, emoji);
         return this;
     };
-    WOKCommands.prototype.setCategorySettings = function (category, emoji) {
+    SIYCommands.prototype.setCategorySettings = function (category, emoji) {
         if (typeof category == "string") {
             if (!emoji) {
-                throw new Error("WOKCommands > An emoji is required for category \"" + category + "\"");
+                throw new Error("SIYCommands > An emoji is required for category \"" + category + "\"");
             }
             if (this.isEmojiUsed(emoji)) {
-                console.warn("WOKCommands > The emoji \"" + emoji + "\" for category \"" + category + "\" is already used.");
+                console.warn("SIYCommands > The emoji \"" + emoji + "\" for category \"" + category + "\" is already used.");
             }
             this._categories.set(category, emoji || this.categories.get(category) || "");
         }
@@ -320,7 +320,7 @@ var WOKCommands = /** @class */ (function (_super) {
                     emoji_1 = this._client.emojis.cache.get(emoji_1);
                 }
                 if (this.isEmojiUsed(emoji_1)) {
-                    console.warn("WOKCommands > The emoji \"" + emoji_1 + "\" for category \"" + name_1 + "\" is already used.");
+                    console.warn("SIYCommands > The emoji \"" + emoji_1 + "\" for category \"" + name_1 + "\" is already used.");
                 }
                 this._categories.set(name_1, emoji_1 || this.categories.get(name_1) || "");
                 if (hidden) {
@@ -330,7 +330,7 @@ var WOKCommands = /** @class */ (function (_super) {
         }
         return this;
     };
-    WOKCommands.prototype.isEmojiUsed = function (emoji) {
+    SIYCommands.prototype.isEmojiUsed = function (emoji) {
         var isUsed = false;
         this._categories.forEach(function (value) {
             if (value === emoji) {
@@ -339,102 +339,102 @@ var WOKCommands = /** @class */ (function (_super) {
         });
         return isUsed;
     };
-    Object.defineProperty(WOKCommands.prototype, "commandHandler", {
+    Object.defineProperty(SIYCommands.prototype, "commandHandler", {
         get: function () {
             return this._commandHandler;
         },
         enumerable: false,
         configurable: true
     });
-    Object.defineProperty(WOKCommands.prototype, "mongoConnection", {
+    Object.defineProperty(SIYCommands.prototype, "mongoConnection", {
         get: function () {
             return this._mongoConnection;
         },
         enumerable: false,
         configurable: true
     });
-    WOKCommands.prototype.isDBConnected = function () {
+    SIYCommands.prototype.isDBConnected = function () {
         var connection = this.mongoConnection;
         return !!(connection && connection.readyState === 1);
     };
-    WOKCommands.prototype.setTagPeople = function (tagPeople) {
+    SIYCommands.prototype.setTagPeople = function (tagPeople) {
         this._tagPeople = tagPeople;
         return this;
     };
-    Object.defineProperty(WOKCommands.prototype, "tagPeople", {
+    Object.defineProperty(SIYCommands.prototype, "tagPeople", {
         get: function () {
             return this._tagPeople;
         },
         enumerable: false,
         configurable: true
     });
-    Object.defineProperty(WOKCommands.prototype, "showWarns", {
+    Object.defineProperty(SIYCommands.prototype, "showWarns", {
         get: function () {
             return this._showWarns;
         },
         enumerable: false,
         configurable: true
     });
-    Object.defineProperty(WOKCommands.prototype, "del", {
+    Object.defineProperty(SIYCommands.prototype, "del", {
         get: function () {
             return this._del;
         },
         enumerable: false,
         configurable: true
     });
-    Object.defineProperty(WOKCommands.prototype, "ignoreBots", {
+    Object.defineProperty(SIYCommands.prototype, "ignoreBots", {
         get: function () {
             return this._ignoreBots;
         },
         enumerable: false,
         configurable: true
     });
-    Object.defineProperty(WOKCommands.prototype, "botOwner", {
+    Object.defineProperty(SIYCommands.prototype, "botOwner", {
         get: function () {
             return this._botOwner;
         },
         enumerable: false,
         configurable: true
     });
-    WOKCommands.prototype.setBotOwner = function (botOwner) {
+    SIYCommands.prototype.setBotOwner = function (botOwner) {
         if (typeof botOwner === "string") {
             botOwner = [botOwner];
         }
         this._botOwner = botOwner;
         return this;
     };
-    Object.defineProperty(WOKCommands.prototype, "testServers", {
+    Object.defineProperty(SIYCommands.prototype, "testServers", {
         get: function () {
             return this._testServers;
         },
         enumerable: false,
         configurable: true
     });
-    Object.defineProperty(WOKCommands.prototype, "defaultLanguage", {
+    Object.defineProperty(SIYCommands.prototype, "defaultLanguage", {
         get: function () {
             return this._defaultLanguage;
         },
         enumerable: false,
         configurable: true
     });
-    WOKCommands.prototype.setDefaultLanguage = function (defaultLanguage) {
+    SIYCommands.prototype.setDefaultLanguage = function (defaultLanguage) {
         this._defaultLanguage = defaultLanguage;
         return this;
     };
-    Object.defineProperty(WOKCommands.prototype, "messageHandler", {
+    Object.defineProperty(SIYCommands.prototype, "messageHandler", {
         get: function () {
             return this._messageHandler;
         },
         enumerable: false,
         configurable: true
     });
-    Object.defineProperty(WOKCommands.prototype, "slashCommands", {
+    Object.defineProperty(SIYCommands.prototype, "slashCommands", {
         get: function () {
             return this._slashCommand;
         },
         enumerable: false,
         configurable: true
     });
-    return WOKCommands;
+    return SIYCommands;
 }(events_1.EventEmitter));
-module.exports = WOKCommands;
+module.exports = SIYCommands;

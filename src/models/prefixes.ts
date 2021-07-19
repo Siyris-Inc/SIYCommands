@@ -11,4 +11,4 @@ const prefixSchema = new mongoose.Schema({
   prefix: reqString,
 })
 
-export = mongoose.model('wokcommands-prefixes', prefixSchema)
+export = mongoose.model('SIYCommands-prefixes', prefixSchema)

@@ -16,4 +16,4 @@ const cooldownSchema = new mongoose.Schema({
   },
 })
 
-export = mongoose.model('wokcommands-cooldowns', cooldownSchema)
+export = mongoose.model('SIYCommands-cooldowns', cooldownSchema)

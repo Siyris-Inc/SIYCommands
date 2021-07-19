@@ -68,7 +68,7 @@ var Command = /** @class */ (function () {
         this._minArgs = minArgs || 0;
         this._maxArgs = maxArgs === undefined ? -1 : maxArgs;
         if (typeof syntaxError === "string") {
-            console.warn("WOKCommands > String syntax errors are deprecated. Please use an object instead to specify the language. See https://github.com/AlexzanderFlores/WOKCommands#storing-custom-messages-and-translations");
+            console.warn("SIYCommands > String syntax errors are deprecated. Please use an object instead to specify the language. See https://github.com/AlexzanderFlores/SIYCommands#storing-custom-messages-and-translations");
             syntaxError = {
                 english: syntaxError,
             };
@@ -243,7 +243,7 @@ var Command = /** @class */ (function () {
             this._cooldownDuration < 60) {
             throw new Error("Invalid " + type + " format! The minimum duration for a global cooldown is 1m.");
         }
-        var moreInfo = " For more information please see https://github.com/AlexzanderFlores/WOKCommands#command-cooldowns";
+        var moreInfo = " For more information please see https://github.com/AlexzanderFlores/SIYCommands#command-cooldowns";
         if (this._cooldownDuration < 1) {
             throw new Error("Invalid " + type + " format! Durations must be at least 1." + moreInfo);
         }
@@ -278,7 +278,7 @@ var Command = /** @class */ (function () {
             (this._cooldownChar === "m" && this._cooldownDuration >= 5)) {
             this._databaseCooldown = true;
             if (!connected) {
-                console.warn("WOKCommands > A database connection is STRONGLY RECOMMENDED for cooldowns of 5 minutes or more.");
+                console.warn("SIYCommands > A database connection is STRONGLY RECOMMENDED for cooldowns of 5 minutes or more.");
             }
         }
     };

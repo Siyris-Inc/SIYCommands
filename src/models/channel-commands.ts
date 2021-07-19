@@ -14,4 +14,4 @@ const channelCommandSchema = new mongoose.Schema({
   },
 });
 
-export = mongoose.model("wokcommands-channel-commands", channelCommandSchema);
+export = mongoose.model("SIYCommands-channel-commands", channelCommandSchema);

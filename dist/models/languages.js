@@ -12,4 +12,4 @@ var languageSchema = new mongoose_1.default.Schema({
     _id: reqString,
     language: reqString,
 });
-module.exports = mongoose_1.default.model('wokcommands-languages', languageSchema);
+module.exports = mongoose_1.default.model('SIYCommands-languages', languageSchema);

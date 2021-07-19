@@ -1,6 +1,6 @@
 import { Client, Guild } from "discord.js";
 import fs from "fs";
-import WOKCommands from ".";
+import SIYCommands from ".";
 import path from "path";
 
 import Command from "./Command";
@@ -19,7 +19,7 @@ class CommandHandler {
   private _client: Client | null = null;
 
   constructor(
-    instance: WOKCommands,
+    instance: SIYCommands,
     client: Client,
     dir: string,
     disabledDefaultCommands: string[]
@@ -50,7 +50,7 @@ class CommandHandler {
       }
 
       console.log(
-        `WOKCommands > Loaded ${amount} command${amount === 1 ? "" : "s"}.`
+        `SIYCommands > Loaded ${amount} command${amount === 1 ? "" : "s"}.`
       );
 
       for (const [file, fileName] of files) {
@@ -376,7 +376,7 @@ class CommandHandler {
   }
 
   public async registerCommand(
-    instance: WOKCommands,
+    instance: SIYCommands,
     client: Client,
     file: string,
     fileName: string
@@ -464,32 +464,32 @@ class CommandHandler {
 
     if (missing.length && instance.showWarns) {
       console.warn(
-        `WOKCommands > Command "${names[0]}" does not have the following properties: ${missing}.`
+        `SIYCommands > Command "${names[0]}" does not have the following properties: ${missing}.`
       );
     }
 
     if (testOnly && !instance.testServers.length) {
       console.warn(
-        `WOKCommands > Command "${names[0]}" has "testOnly" set to true, but no test servers are defined.`
+        `SIYCommands > Command "${names[0]}" has "testOnly" set to true, but no test servers are defined.`
       );
     }
 
     if (slash !== undefined && typeof slash !== "boolean" && slash !== "both") {
       throw new Error(
-        `WOKCommands > Command "${names[0]}" has a "slash" property that is not boolean "true" or string "both".`
+        `SIYCommands > Command "${names[0]}" has a "slash" property that is not boolean "true" or string "both".`
       );
     }
 
     if (slash) {
       if (!description) {
         throw new Error(
-          `WOKCommands > A description is required for command "${names[0]}" because it is a slash command.`
+          `SIYCommands > A description is required for command "${names[0]}" because it is a slash command.`
         );
       }
 
       if (minArgs !== undefined && !expectedArgs) {
         throw new Error(
-          `WOKCommands > Command "${names[0]}" has "minArgs" property defined without "expectedArgs" property as a slash command.`
+          `SIYCommands > Command "${names[0]}" has "minArgs" property defined without "expectedArgs" property as a slash command.`
         );
       }
 

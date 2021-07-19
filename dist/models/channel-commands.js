@@ -15,4 +15,4 @@ var channelCommandSchema = new mongoose_1.default.Schema({
         required: true,
     },
 });
-module.exports = mongoose_1.default.model("wokcommands-channel-commands", channelCommandSchema);
+module.exports = mongoose_1.default.model("SIYCommands-channel-commands", channelCommandSchema);

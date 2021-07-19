@@ -1,7 +1,7 @@
 import { Message, MessageEmbed } from 'discord.js'
-import WOKCommands from '../../'
+import SIYCommands from '../../'
 
-const getFirstEmbed = (message: Message, instance: WOKCommands) => {
+const getFirstEmbed = (message: Message, instance: SIYCommands) => {
   const { guild, member } = message
 
   const {
@@ -63,7 +63,7 @@ const getFirstEmbed = (message: Message, instance: WOKCommands) => {
 
     if (!emoji) {
       console.warn(
-        `WOKCommands > Category "${key}" does not have an emoji icon.`
+        `SIYCommands > Category "${key}" does not have an emoji icon.`
       )
 
       continue

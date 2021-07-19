@@ -25,7 +25,7 @@ type Options = {
   disabledDefaultCommands: string | string[];
 };
 
-class WOKCommands extends EventEmitter {
+class SIYCommands extends EventEmitter {
   private _client!: Client;
   private _defaultPrefix = "!";
   private _commandsDir = "commands";
@@ -85,14 +85,14 @@ class WOKCommands extends EventEmitter {
     ) {
       if (showWarns) {
         console.warn(
-          `WOKCommands > It is encouraged to use both "MESSAGE" and "REACTION" partials when using WOKCommands due to it's help menu. More information can be found here: https://discord.js.org/#/docs/main/stable/topics/partials`
+          `SIYCommands > It is encouraged to use both "MESSAGE" and "REACTION" partials when using SIYCommands due to it's help menu. More information can be found here: https://discord.js.org/#/docs/main/stable/topics/partials`
         );
       }
     }
 
     if (showWarns && !commandsDir) {
       console.warn(
-        'WOKCommands > No commands folder specified. Using "commands"'
+        'SIYCommands > No commands folder specified. Using "commands"'
       );
     }
 
@@ -161,7 +161,7 @@ class WOKCommands extends EventEmitter {
       } else {
         if (showWarns) {
           console.warn(
-            "WOKCommands > No MongoDB connection URI provided. Some features might not work! See this for more details:\nhttps://github.com/AlexzanderFlores/WOKCommands#setup"
+            "SIYCommands > No MongoDB connection URI provided. Some features might not work! See this for more details:\nhttps://github.com/AlexzanderFlores/SIYCommands#setup"
           );
         }
 
@@ -174,7 +174,7 @@ class WOKCommands extends EventEmitter {
     return this._mongo;
   }
 
-  public setMongoPath(mongoPath: string): WOKCommands {
+  public setMongoPath(mongoPath: string): SIYCommands {
     this._mongo = mongoPath;
     return this;
   }
@@ -182,9 +182,9 @@ class WOKCommands extends EventEmitter {
   /**
    * @deprecated Please use the messages.json file instead of this method.
    */
-  public setSyntaxError(syntaxError: string): WOKCommands {
+  public setSyntaxError(syntaxError: string): SIYCommands {
     console.warn(
-      `WOKCommands > The setSyntaxError method is deprecated. Please use messages.json instead. See https://www.npmjs.com/package/wokcommands#language-support for more information`
+      `SIYCommands > The setSyntaxError method is deprecated. Please use messages.json instead. See https://www.npmjs.com/package/SIYCommands#language-support for more information`
     );
     return this;
   }
@@ -197,7 +197,7 @@ class WOKCommands extends EventEmitter {
     return this._displayName;
   }
 
-  public setDisplayName(displayName: string): WOKCommands {
+  public setDisplayName(displayName: string): SIYCommands {
     this._displayName = displayName;
     return this;
   }
@@ -210,7 +210,7 @@ class WOKCommands extends EventEmitter {
     return this._defaultPrefix;
   }
 
-  public setDefaultPrefix(defaultPrefix: string): WOKCommands {
+  public setDefaultPrefix(defaultPrefix: string): SIYCommands {
     this._defaultPrefix = defaultPrefix;
     return this;
   }
@@ -219,7 +219,7 @@ class WOKCommands extends EventEmitter {
     return this._prefixes[guild ? guild.id : ""] || this._defaultPrefix;
   }
 
-  public setPrefix(guild: Guild | null, prefix: string): WOKCommands {
+  public setPrefix(guild: Guild | null, prefix: string): SIYCommands {
     if (guild) {
       this._prefixes[guild.id] = prefix;
     }
@@ -238,7 +238,7 @@ class WOKCommands extends EventEmitter {
     return this._color;
   }
 
-  public setColor(color: string): WOKCommands {
+  public setColor(color: string): SIYCommands {
     this._color = color;
     return this;
   }
@@ -274,9 +274,9 @@ class WOKCommands extends EventEmitter {
   public setCategoryEmoji(
     category: string | [{ [key: string]: any }],
     emoji?: string
-  ): WOKCommands {
+  ): SIYCommands {
     console.warn(
-      `WOKCommands > The setCategoryEmoji method is deprecated, please use setCategorySettings`
+      `SIYCommands > The setCategoryEmoji method is deprecated, please use setCategorySettings`
     );
 
     this.setCategorySettings(category, emoji);
@@ -286,17 +286,17 @@ class WOKCommands extends EventEmitter {
   public setCategorySettings(
     category: string | [{ [key: string]: any }],
     emoji?: string
-  ): WOKCommands {
+  ): SIYCommands {
     if (typeof category == "string") {
       if (!emoji) {
         throw new Error(
-          `WOKCommands > An emoji is required for category "${category}"`
+          `SIYCommands > An emoji is required for category "${category}"`
         );
       }
 
       if (this.isEmojiUsed(emoji)) {
         console.warn(
-          `WOKCommands > The emoji "${emoji}" for category "${category}" is already used.`
+          `SIYCommands > The emoji "${emoji}" for category "${category}" is already used.`
         );
       }
 
@@ -318,7 +318,7 @@ class WOKCommands extends EventEmitter {
 
         if (this.isEmojiUsed(emoji)) {
           console.warn(
-            `WOKCommands > The emoji "${emoji}" for category "${name}" is already used.`
+            `SIYCommands > The emoji "${emoji}" for category "${name}" is already used.`
           );
         }
 
@@ -358,7 +358,7 @@ class WOKCommands extends EventEmitter {
     return !!(connection && connection.readyState === 1);
   }
 
-  public setTagPeople(tagPeople: boolean): WOKCommands {
+  public setTagPeople(tagPeople: boolean): SIYCommands {
     this._tagPeople = tagPeople;
     return this;
   }
@@ -383,7 +383,7 @@ class WOKCommands extends EventEmitter {
     return this._botOwner;
   }
 
-  public setBotOwner(botOwner: string | string[]): WOKCommands {
+  public setBotOwner(botOwner: string | string[]): SIYCommands {
     if (typeof botOwner === "string") {
       botOwner = [botOwner];
     }
@@ -399,7 +399,7 @@ class WOKCommands extends EventEmitter {
     return this._defaultLanguage;
   }
 
-  public setDefaultLanguage(defaultLanguage: string): WOKCommands {
+  public setDefaultLanguage(defaultLanguage: string): SIYCommands {
     this._defaultLanguage = defaultLanguage;
     return this;
   }
@@ -413,4 +413,4 @@ class WOKCommands extends EventEmitter {
   }
 }
 
-export = WOKCommands;
+export = SIYCommands;

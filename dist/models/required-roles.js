@@ -15,4 +15,4 @@ var requiredRoleSchema = new mongoose_1.default.Schema({
         required: true,
     },
 });
-module.exports = mongoose_1.default.model('wokcommands-required-roles', requiredRoleSchema);
+module.exports = mongoose_1.default.model('SIYCommands-required-roles', requiredRoleSchema);

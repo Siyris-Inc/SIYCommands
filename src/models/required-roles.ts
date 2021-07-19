@@ -14,4 +14,4 @@ const requiredRoleSchema = new mongoose.Schema({
   },
 })
 
-export = mongoose.model('wokcommands-required-roles', requiredRoleSchema)
+export = mongoose.model('SIYCommands-required-roles', requiredRoleSchema)

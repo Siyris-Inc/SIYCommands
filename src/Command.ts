@@ -1,12 +1,12 @@
 import { Client, Guild, Message } from "discord.js";
-import WOKCommands from ".";
+import SIYCommands from ".";
 
 import permissions from "./permissions";
 import ICommand from "./interfaces/ICommand";
 import cooldownSchema from "./models/cooldown";
 
 class Command {
-  private instance: WOKCommands;
+  private instance: SIYCommands;
   private client: Client;
   private _names: string[] = [];
   private _category = "";
@@ -35,7 +35,7 @@ class Command {
   private _requiredChannels: Map<String, String[]> = new Map(); // <GuildID-Command, Channel IDs>
 
   constructor(
-    instance: WOKCommands,
+    instance: SIYCommands,
     client: Client,
     names: string[],
     callback: Function,
@@ -66,7 +66,7 @@ class Command {
     this._maxArgs = maxArgs === undefined ? -1 : maxArgs;
     if (typeof syntaxError === "string") {
       console.warn(
-        `WOKCommands > String syntax errors are deprecated. Please use an object instead to specify the language. See https://github.com/AlexzanderFlores/WOKCommands#storing-custom-messages-and-translations`
+        `SIYCommands > String syntax errors are deprecated. Please use an object instead to specify the language. See https://github.com/AlexzanderFlores/SIYCommands#storing-custom-messages-and-translations`
       );
       syntaxError = {
         english: syntaxError,
@@ -248,7 +248,7 @@ class Command {
     }
 
     const moreInfo =
-      " For more information please see https://github.com/AlexzanderFlores/WOKCommands#command-cooldowns";
+      " For more information please see https://github.com/AlexzanderFlores/SIYCommands#command-cooldowns";
 
     if (this._cooldownDuration < 1) {
       throw new Error(
@@ -296,7 +296,7 @@ class Command {
 
       if (!connected) {
         console.warn(
-          `WOKCommands > A database connection is STRONGLY RECOMMENDED for cooldowns of 5 minutes or more.`
+          `SIYCommands > A database connection is STRONGLY RECOMMENDED for cooldowns of 5 minutes or more.`
         );
       }
     }

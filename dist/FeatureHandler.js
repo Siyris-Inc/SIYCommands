@@ -80,11 +80,11 @@ var FeatureHandler = /** @class */ (function () {
                 if (!dbName)
                     missing.push('dbName');
                 if (missing.length && _this._instance.showWarns) {
-                    console.warn("WOKCommands > Feature \"" + fileName + "\" has a config file that doesn't contain the following properties: " + missing);
+                    console.warn("SIYCommands > Feature \"" + fileName + "\" has a config file that doesn't contain the following properties: " + missing);
                 }
             }
             else if (_this._instance.showWarns) {
-                console.warn("WOKCommands > Feature \"" + fileName + "\" does not export a config object.");
+                console.warn("SIYCommands > Feature \"" + fileName + "\" does not export a config object.");
             }
             if (typeof func !== 'function') {
                 return;
@@ -144,7 +144,7 @@ var FeatureHandler = /** @class */ (function () {
         if (amount === 0) {
             return;
         }
-        console.log("WOKCommands > Loaded " + amount + " listener" + (amount === 1 ? '' : 's') + ".");
+        console.log("SIYCommands > Loaded " + amount + " listener" + (amount === 1 ? '' : 's') + ".");
         (function () { return __awaiter(_this, void 0, void 0, function () {
             var _i, files_1, _a, file, fileName, _b;
             return __generator(this, function (_c) {

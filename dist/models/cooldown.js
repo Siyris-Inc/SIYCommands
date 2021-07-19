@@ -17,4 +17,4 @@ var cooldownSchema = new mongoose_1.default.Schema({
         required: true,
     },
 });
-module.exports = mongoose_1.default.model('wokcommands-cooldowns', cooldownSchema);
+module.exports = mongoose_1.default.model('SIYCommands-cooldowns', cooldownSchema);

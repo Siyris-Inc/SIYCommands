@@ -79,7 +79,7 @@ var CommandHandler = /** @class */ (function () {
             if (amount <= 0) {
                 return;
             }
-            console.log("WOKCommands > Loaded " + amount + " command" + (amount === 1 ? "" : "s") + ".");
+            console.log("SIYCommands > Loaded " + amount + " command" + (amount === 1 ? "" : "s") + ".");
             for (var _c = 0, files_1 = files; _c < files_1.length; _c++) {
                 var _d = files_1[_c], file = _d[0], fileName = _d[1];
                 this.registerCommand(instance, client, file, fileName);
@@ -420,20 +420,20 @@ var CommandHandler = /** @class */ (function () {
                             missing.push("Description");
                         }
                         if (missing.length && instance.showWarns) {
-                            console.warn("WOKCommands > Command \"" + names[0] + "\" does not have the following properties: " + missing + ".");
+                            console.warn("SIYCommands > Command \"" + names[0] + "\" does not have the following properties: " + missing + ".");
                         }
                         if (testOnly && !instance.testServers.length) {
-                            console.warn("WOKCommands > Command \"" + names[0] + "\" has \"testOnly\" set to true, but no test servers are defined.");
+                            console.warn("SIYCommands > Command \"" + names[0] + "\" has \"testOnly\" set to true, but no test servers are defined.");
                         }
                         if (slash !== undefined && typeof slash !== "boolean" && slash !== "both") {
-                            throw new Error("WOKCommands > Command \"" + names[0] + "\" has a \"slash\" property that is not boolean \"true\" or string \"both\".");
+                            throw new Error("SIYCommands > Command \"" + names[0] + "\" has a \"slash\" property that is not boolean \"true\" or string \"both\".");
                         }
                         if (!slash) return [3 /*break*/, 7];
                         if (!description) {
-                            throw new Error("WOKCommands > A description is required for command \"" + names[0] + "\" because it is a slash command.");
+                            throw new Error("SIYCommands > A description is required for command \"" + names[0] + "\" because it is a slash command.");
                         }
                         if (minArgs !== undefined && !expectedArgs) {
-                            throw new Error("WOKCommands > Command \"" + names[0] + "\" has \"minArgs\" property defined without \"expectedArgs\" property as a slash command.");
+                            throw new Error("SIYCommands > Command \"" + names[0] + "\" has \"minArgs\" property defined without \"expectedArgs\" property as a slash command.");
                         }
                         slashCommands = instance.slashCommands;
                         options = [];

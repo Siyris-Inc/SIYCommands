@@ -90,7 +90,7 @@ module.exports = {
         var message = options.message, instance = options.instance, args = options.args;
         var guild = message.guild;
         if (guild && !((_a = guild.me) === null || _a === void 0 ? void 0 : _a.hasPermission('SEND_MESSAGES'))) {
-            console.warn("WOKCommands > Could not send message due to no permissions in channel for " + guild.name);
+            console.warn("SIYCommands > Could not send message due to no permissions in channel for " + guild.name);
             return;
         }
         if (guild && !((_b = guild.me) === null || _b === void 0 ? void 0 : _b.hasPermission('ADD_REACTIONS'))) {

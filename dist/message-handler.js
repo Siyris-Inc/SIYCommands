@@ -149,7 +149,7 @@ var MessageHandler = /** @class */ (function () {
         var language = this.getLanguage(guild);
         var translations = this._messages[messageId];
         if (!translations) {
-            console.error("WOKCommands > Could not find the correct message to send for \"" + messageId + "\"");
+            console.error("SIYCommands > Could not find the correct message to send for \"" + messageId + "\"");
             return 'Could not find the correct message to send. Please report this to the bot developer.';
         }
         var result = translations[language];
@@ -165,12 +165,12 @@ var MessageHandler = /** @class */ (function () {
         var language = this.getLanguage(guild);
         var items = this._messages[embedId];
         if (!items) {
-            console.error("WOKCommands > Could not find the correct item to send for \"" + embedId + "\" -> \"" + itemId + "\"");
+            console.error("SIYCommands > Could not find the correct item to send for \"" + embedId + "\" -> \"" + itemId + "\"");
             return 'Could not find the correct message to send. Please report this to the bot developer.';
         }
         var translations = items[itemId];
         if (!translations) {
-            console.error("WOKCommands > Could not find the correct message to send for \"" + embedId + "\"");
+            console.error("SIYCommands > Could not find the correct message to send for \"" + embedId + "\"");
             return 'Could not find the correct message to send. Please report this to the bot developer.';
         }
         var result = translations[language];

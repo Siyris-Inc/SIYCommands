@@ -1,10 +1,10 @@
 import { Client, Message, MessageEmbed } from 'discord.js'
-import WOKCommands from '../..'
+import SIYCommands from '../..'
 import ICommandArguments from '../../interfaces/ICommandArguments'
 import getFirstEmbed from './!get-first-embed'
 import ReactionListener, { addReactions } from './!ReactionListener'
 
-const sendHelpMenu = (message: Message, instance: WOKCommands) => {
+const sendHelpMenu = (message: Message, instance: SIYCommands) => {
   const { embed, reactions } = getFirstEmbed(message, instance)
 
   message.channel
@@ -22,7 +22,7 @@ module.exports = {
   expectedArgs: '[command]',
   description: "Displays this bot's commands",
   category: 'Help',
-  init: (client: Client, instance: WOKCommands) => {
+  init: (client: Client, instance: SIYCommands) => {
     client.on('messageReactionAdd', async (reaction, user) => {
       new ReactionListener(instance, reaction, user)
     })
@@ -34,7 +34,7 @@ module.exports = {
 
     if (guild && !guild.me?.hasPermission('SEND_MESSAGES')) {
       console.warn(
-        `WOKCommands > Could not send message due to no permissions in channel for ${guild.name}`
+        `SIYCommands > Could not send message due to no permissions in channel for ${guild.name}`
       )
       return
     }

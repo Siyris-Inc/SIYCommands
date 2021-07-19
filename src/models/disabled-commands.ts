@@ -10,4 +10,4 @@ const disabledCommands = new mongoose.Schema({
   command: reqString,
 })
 
-export = mongoose.model('wokcommands-disabled-commands', disabledCommands)
+export = mongoose.model('SIYCommands-disabled-commands', disabledCommands)
