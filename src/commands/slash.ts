@@ -63,6 +63,6 @@ export = {
 
     embed.setColor(instance.color);
 
-    channel.send("", { embed });
+    channel.send("", { embeds: [embed] });
   },
 };

@@ -78,7 +78,7 @@ class ReactionHandler {
   canBotRemoveReaction = () => {
     return (
       this.message.channel.type !== "dm" &&
-      this.message.member?.hasPermission("MANAGE_MESSAGES")
+      this.message.member?.permissions.has("MANAGE_MESSAGES")
     );
   };
 

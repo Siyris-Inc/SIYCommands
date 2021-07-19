@@ -100,7 +100,7 @@ var ReactionHandler = /** @class */ (function () {
          */
         this.canBotRemoveReaction = function () {
             var _a;
-            return (_this.message.channel.type !== "dm" && ((_a = _this.message.member) === null || _a === void 0 ? void 0 : _a.hasPermission("MANAGE_MESSAGES")));
+            return (_this.message.channel.type !== "dm" && ((_a = _this.message.member) === null || _a === void 0 ? void 0 : _a.permissions.has("MANAGE_MESSAGES")));
         };
         /**
          * @returns If the user is allowed to interact with this help menu

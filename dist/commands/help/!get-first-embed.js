@@ -12,7 +12,7 @@ var getFirstEmbed = function (message, instance) {
         embed.setColor(instance.color);
     }
     var categories = {};
-    var isAdmin = member && member.hasPermission('ADMINISTRATOR');
+    var isAdmin = member && member.permissions.has('ADMINISTRATOR');
     for (var _i = 0, commands_1 = commands; _i < commands_1.length; _i++) {
         var _a = commands_1[_i], category = _a.category, testOnly = _a.testOnly;
         if (!category ||

@@ -57,7 +57,7 @@ class CommandHandler {
         this.registerCommand(instance, client, file, fileName);
       }
 
-      client.on("message", (message) => {
+      client.on("messageCreate", (message) => {
         const guild: Guild | null = message.guild;
         let content: string = message.content;
         const prefix = instance.getPrefix(guild);
@@ -142,7 +142,7 @@ class CommandHandler {
         if (guild && member) {
           for (const perm of requiredPermissions || []) {
             // @ts-ignore
-            if (!member.hasPermission(perm)) {
+            if (!member.permissions.has(perm)) {
               if (error) {
                 error({
                   error: CommandErrors.MISSING_PERMISSIONS,

@@ -84,7 +84,7 @@ var CommandHandler = /** @class */ (function () {
                 var _d = files_1[_c], file = _d[0], fileName = _d[1];
                 this.registerCommand(instance, client, file, fileName);
             }
-            client.on("message", function (message) {
+            client.on("messageCreate", function (message) {
                 var _a;
                 var guild = message.guild;
                 var content = message.content;
@@ -148,7 +148,7 @@ var CommandHandler = /** @class */ (function () {
                     for (var _i = 0, _b = requiredPermissions || []; _i < _b.length; _i++) {
                         var perm = _b[_i];
                         // @ts-ignore
-                        if (!member.hasPermission(perm)) {
+                        if (!member.permissions.has(perm)) {
                             if (error) {
                                 error({
                                     error: CommandErrors_1.default.MISSING_PERMISSIONS,
