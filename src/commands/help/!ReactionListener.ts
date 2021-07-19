@@ -234,6 +234,12 @@ class ReactionHandler {
       )}`;
     }
 
+    desc += `\n\n${this.instance.messageHandler.getEmbed(
+      this.guild,
+      "HELP_MENU",
+      "DESCRIPTION_THIRD_LINE"
+    )}`;
+
     const start = (page - 1) * this.pageLimit;
 
     for (

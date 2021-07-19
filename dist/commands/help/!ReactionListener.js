@@ -186,6 +186,7 @@ var ReactionHandler = /** @class */ (function () {
             if (hasMultiplePages) {
                 desc += "\n\n" + _this.instance.messageHandler.getEmbed(_this.guild, "HELP_MENU", "DESCRIPTION_SECOND_LINE");
             }
+            desc += "\n\n" + _this.instance.messageHandler.getEmbed(_this.guild, "HELP_MENU", "DESCRIPTION_THIRD_LINE");
             var start = (page - 1) * _this.pageLimit;
             for (var a = start, counter = a; a < commands.length && a < start + _this.pageLimit; ++a) {
                 var command = commands[a];

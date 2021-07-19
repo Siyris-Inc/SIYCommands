@@ -324,6 +324,13 @@
       "dutch": "Gebruik ⬅ en ➡ om tussen pagina's te navigeren.",
       "french": "Utilisez ⬅ et ➡ pour naviguer entre les pages."
     },
+    "DESCRIPTION_THIRD_LINE": {
+      "english": "Don't include braces around `<required>` or `[optional]` parameters.",
+      "spanish": "Utilice ⬅ y ➡ para navegar entre páginas.",
+      "portuguese": "Use ⬅ e ➡ para navegar entre as páginas.",
+      "russian": "Используйте ⬅ and ➡ для перехода между страницами.",
+      "german": "Benutze ⬅ und ➡, um zwischen den Seiten hin und her zu wechseln."
+    },
     "ALIASES": {
       "english": "Aliases",
       "spanish": "Alias",
