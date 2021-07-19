@@ -134,7 +134,7 @@ var ReactionHandler = /** @class */ (function () {
         this.returnToMainMenu = function () {
             var _a = _get_first_embed_1.default(_this.message, _this.instance), newEmbed = _a.embed, reactions = _a.reactions;
             _this.embed.setDescription(newEmbed.description);
-            _this.message.edit(_this.embed);
+            _this.message.edit({embeds : _this.embed});
             if (_this.canBotRemoveReaction()) {
                 _this.message.reactions.removeAll();
             }
@@ -200,7 +200,7 @@ var ReactionHandler = /** @class */ (function () {
             }
             desc += "\n\nPage " + page + " / " + maxPages + ".";
             _this.embed.setDescription(desc);
-            _this.message.edit(_this.embed);
+            _this.message.edit({embeds : _this.embed});
             if (_this.canBotRemoveReaction()) {
                 _this.message.reactions.removeAll();
             }

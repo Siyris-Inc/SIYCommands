@@ -127,7 +127,7 @@ class ReactionHandler {
     );
 
     this.embed.setDescription(newEmbed.description);
-    this.message.edit(this.embed);
+    this.message.edit({embeds : this.embed});
     if (this.canBotRemoveReaction()) {
       this.message.reactions.removeAll();
     }
@@ -262,7 +262,7 @@ class ReactionHandler {
     desc += `\n\nPage ${page} / ${maxPages}.`;
 
     this.embed.setDescription(desc);
-    this.message.edit(this.embed);
+    this.message.edit({embeds : this.embed});
 
     if (this.canBotRemoveReaction()) {
       this.message.reactions.removeAll();
