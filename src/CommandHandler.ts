@@ -225,7 +225,7 @@ class CommandHandler {
 
           let errorMsg =
             syntaxError[messageHandler.getLanguage(guild)] ||
-            instance.messageHandler.get(guild, "SYNTAX_ERROR");
+            instance.messageHandler.get(guild, "USAGE_ERROR");
 
           // Replace {PREFIX} with the actual prefix
           if (errorMsg) {

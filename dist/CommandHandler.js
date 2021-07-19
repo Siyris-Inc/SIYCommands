@@ -219,7 +219,7 @@ var CommandHandler = /** @class */ (function () {
                     var syntaxError = command.syntaxError || {};
                     var messageHandler = instance.messageHandler;
                     var errorMsg = syntaxError[messageHandler.getLanguage(guild)] ||
-                        instance.messageHandler.get(guild, "SYNTAX_ERROR");
+                        instance.messageHandler.get(guild, "USAGE_ERROR");
                     // Replace {PREFIX} with the actual prefix
                     if (errorMsg) {
                         errorMsg = errorMsg.replace(/{PREFIX}/g, prefix);

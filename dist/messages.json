@@ -146,7 +146,7 @@
         "russian": "Добавлена роль {ROLE} в команду {COMMAND}.",
         "german": "Die Rolle {ROLE} wurde dem Befehl {COMMAND} hinzugefügt."
     },
-    "SYNTAX_ERROR": {
+    "USAGE_ERROR": {
         "english": "Incorrect usage! Please use \"{PREFIX}{COMMAND} {ARGUMENTS}\"",
         "spanish": "¡Uso incorrecto! Utilice \"{PREFIX} {COMMAND} {ARGUMENTS}\"",
         "portuguese": "Uso incorreto! Utilize \"{PREFIX} {COMMAND} {ARGUMENTS}\"",
@@ -239,11 +239,11 @@
             "german": "Befehle"
         },
         "DESCRIPTION_FIRST_LINE": {
-            "english": "Use 💡 to return to the previous menu.",
-            "spanish": "Utilice 💡 para volver al menú anterior.",
-            "portuguese": "Use 💡 para retornar ao menu anterior",
-            "russian": "Используйте 💡, что-бы вернуться в предыдущее меню.",
-            "german": "Benutze 💡, um zum vorherigen Menü zurückzukehren."
+            "english": "Use 🚪 to return to the previous menu.",
+            "spanish": "Utilice 🚪 para volver al menú anterior.",
+            "portuguese": "Use 🚪 para retornar ao menu anterior",
+            "russian": "Используйте 🚪, что-бы вернуться в предыдущее меню.",
+            "german": "Benutze 🚪, um zum vorherigen Menü zurückzukehren."
         },
         "DESCRIPTION_SECOND_LINE": {
             "english": "Use ⬅ and ➡ to navigate between pages.",
@@ -259,12 +259,12 @@
             "russian": "Псевдонимы",
             "german": "Aliase"
         },
-        "SYNTAX": {
-            "english": "Syntax",
+        "USAGE": {
+            "english": "Usage",
             "spanish": "Sintaxis",
             "portuguese": "Sintaxe",
             "russian": "Синтаксис",
-            "german": "Syntax"
+            "german": "Usage"
         }
     }
 }

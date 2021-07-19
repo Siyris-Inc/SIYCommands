@@ -188,7 +188,7 @@
     "dutch": "Rol {ROLE} toegevoegd aan commando {COMMAND}.",
     "french": "Role {ROLE} ajouté à la commande {COMMAND}."
   },
-  "SYNTAX_ERROR": {
+  "USAGE_ERROR": {
     "english": "Incorrect usage! Please use \"{PREFIX}{COMMAND} {ARGUMENTS}\"",
     "spanish": "¡Uso incorrecto! Utilice \"{PREFIX}{COMMAND} {ARGUMENTS}\"",
     "portuguese": "Uso incorreto! Utilize \"{PREFIX}{COMMAND} {ARGUMENTS}\"",
@@ -333,13 +333,13 @@
       "dutch": "Aliassen",
       "french": "Alias"
     },
-    "SYNTAX": {
-      "english": "Syntax",
+    "USAGE": {
+      "english": "Usage",
       "spanish": "Sintaxis",
       "portuguese": "Sintaxe",
       "russian": "Синтаксис",
-      "german": "Syntax",
-      "dutch": "Syntax",
+      "german": "Usage",
+      "dutch": "Usage",
       "french": "Syntaxe"
     }
   }

@@ -198,14 +198,14 @@ class ReactionHandler {
         guild,
         "HELP_MENU",
         "ALIASES"
-      )}: \`${names.join('", "')}\``;
+      )}: \`${names.join('\`, \`')}\``;
     }
 
     desc += `\n${instance.messageHandler.getEmbed(
       guild,
       "HELP_MENU",
-      "SYNTAX"
-    )}: \`\`\`${instance.getPrefix(guild)}${mainName}${syntax ? " " : ""}${
+      "USAGE"
+    )}: \`\`\`md\n${instance.getPrefix(guild)}${mainName}${syntax ? " " : ""}${
       syntax || ""
     }\`\`\``;
 
@@ -274,7 +274,7 @@ class ReactionHandler {
       reactions.push("⬅");
       reactions.push("➡");
     }
-    reactions.push("💡");
+    reactions.push("🚪");
     addReactions(this.message, reactions);
   };
 
