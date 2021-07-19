@@ -205,7 +205,7 @@ class ReactionHandler {
       guild,
       "HELP_MENU",
       "USAGE"
-    )}: \`\`\`md\n${instance.getPrefix(guild)}${mainName}${syntax ? " " : ""}${
+    )}: \`\`\`css\n${instance.getPrefix(guild)}${mainName}${syntax ? " " : ""}${
       syntax || ""
     }\`\`\``;
 

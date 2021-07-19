@@ -255,7 +255,7 @@ var ReactionHandler = /** @class */ (function () {
         if (names.length && typeof names !== "string") {
             desc += "\n" + instance.messageHandler.getEmbed(guild, "HELP_MENU", "ALIASES") + ": `" + names.join('\`, \`') + "`";
         }
-        desc += "\n" + instance.messageHandler.getEmbed(guild, "HELP_MENU", "USAGE") + ": ```md\n" + instance.getPrefix(guild) + mainName + (syntax ? " " : "") + (syntax || "") + "```";
+        desc += "\n" + instance.messageHandler.getEmbed(guild, "HELP_MENU", "USAGE") + ": ```css\n" + instance.getPrefix(guild) + mainName + (syntax ? " " : "") + (syntax || "") + "```";
         return desc;
     };
     return ReactionHandler;
