@@ -64,7 +64,7 @@ var _ReactionListener_1 = __importStar(require("./!ReactionListener"));
 var sendHelpMenu = function (message, instance) {
     var _a = _get_first_embed_1.default(message, instance), embed = _a.embed, reactions = _a.reactions;
     message.channel
-        .send('', { embeds: [embed] })
+        .send({ embeds: [embed] })
         .then(function (message) {
         _ReactionListener_1.addReactions(message, reactions);
     });
@@ -117,6 +117,6 @@ module.exports = {
         if (instance.color) {
             embed.setColor(instance.color);
         }
-        message.channel.send('', { embeds: [embed] });
+        message.channel.send({ embeds: [embed] });
     },
 };

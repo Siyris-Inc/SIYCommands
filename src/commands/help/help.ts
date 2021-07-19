@@ -8,7 +8,7 @@ const sendHelpMenu = (message: Message, instance: SIYCommands) => {
   const { embed, reactions } = getFirstEmbed(message, instance)
 
   message.channel
-    .send('', { embeds: [embed] })
+    .send({ embeds: [embed] })
     .then((message) => {
       addReactions(message, reactions)
     })
@@ -77,6 +77,6 @@ module.exports = {
       embed.setColor(instance.color)
     }
 
-    message.channel.send('', { embeds: [embed] })
+    message.channel.send({ embeds: [embed] })
   },
 }
