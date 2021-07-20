@@ -189,7 +189,7 @@
     "french": "Role {ROLE} ajouté à la commande {COMMAND}."
   },
   "USAGE_ERROR": {
-    "english": "Incorrect usage! Please use \"{PREFIX}{COMMAND} {ARGUMENTS}\"",
+    "english": "Incorrect usage! Please use `{PREFIX}{COMMAND} {ARGUMENTS}`",
     "spanish": "¡Uso incorrecto! Utilice \"{PREFIX}{COMMAND} {ARGUMENTS}\"",
     "portuguese": "Uso incorreto! Utilize \"{PREFIX}{COMMAND} {ARGUMENTS}\"",
     "russian": "Неправильное использование, пожалуйста используйте \"{PREFIX}{COMMAND} {ARGUMENTS}\"",
